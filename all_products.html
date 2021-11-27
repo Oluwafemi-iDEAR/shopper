@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* cards */
+        .box {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+            grid-gap: 15px;
+            margin: 0 auto;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            background: #fff;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+        }
+
+        .card:before,
+        .card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background: #fff;
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .card:hover:before {
+            transform: rotate(20deg);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+        }
+
+        .card:hover:after {
+            transform: rotate(10deg);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+        }
+
+        .card .imgBx {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+            background: #222;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        .card:hover .imgBx {
+            bottom: 80px;
+        }
+
+        .card .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card .details {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .card .details h2 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            font-size: 20px;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .card .details h2 span {
+            font-weight: 500;
+            font-size: 16px;
+            color: #f38695;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light align-items-center p-3 px-md-4 mb-3 bg-white shadow-sm">
+        <div class="logo"><img src="images/logo.png" height="50" width="50" alt=""></div>
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Navigation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="all_products.html">All Products</a>
+                <a class="dropdown-item" href="product.html">Product view</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="payment.html">Payment</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Sliders
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="index2.html">Slider2</a>
+                <a class="dropdown-item" href="index3.html">Slider3</a>
+            </div>
+        </div>
+        <div class="my-2 my-md-0 mr-md-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fa fa-search text-dark"></i>
+        </form>
+        <a class="btn btn-sm btn-outline-primary" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+    </nav>
+    <div class="container-fluid ">
+        <div class="container-fluid px-1 py-5 mx-auto row bg-white text-dark justify-content-center">
+            <div class="filter"> <button class="btn btn-default" type="button" data-toggle="collapse"
+                    data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span
+                        class="fa fa-filter pl-1"></span></button>
+            </div>
+            <div id="mobile-filter">
+                <p class="pl-sm-0 pl-2"> Home | <b>All Gadgets</b></p>
+                <div class="border-bottom pb-2 ml-2">
+                    <h4 id="burgundy">Filters</h4>
+                </div>
+                <div class="py-2 border-bottom ml-3">
+                    <h6 class="font-weight-bold">Categories</h6>
+                    <div id="blue"><span class="fa fa-minus"></span></div>
+                    <form>
+                        <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">iOS</label>
+                        </div>
+                        <div class="form-group"> <input type="checkbox" id="breakfast"> <label
+                                for="breakfast">Android</label> </div>
+                        <div class="form-group"> <input type="checkbox" id="healthy"> <label
+                                for="healthy">Laptops</label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="py-2 ml-3">
+                    <h6 class="font-weight-bold">Top Offers</h6>
+                    <div id="blue"><span class="fa fa-minus"></span></div>
+                    <form>
+                        <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label>
+                        </div>
+                        <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off on
+                                artisan
+                                Gadgets</label> </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Sidebar filter section -->
+            <section id="sidebar">
+                <p> Home | <b>All Gadgets</b></p>
+                <div class="border-bottom pb-2 ml-2">
+                    <h4 id="burgundy">Filters</h4>
+                </div>
+                <div class="py-2 border-bottom ml-3">
+                    <h6 class="font-weight-bold">Categories</h6>
+                    <div id="blue"><span class="fa fa-minus"></span></div>
+                    <form>
+                        <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">iOS</label>
+                        </div>
+                        <div class="form-group"> <input type="checkbox" id="breakfast"> <label
+                                for="breakfast">Android</label> </div>
+                        <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">Laptops
+                            </label> </div>
+                    </form>
+                </div>
+
+                <div class="py-2 ml-3">
+                    <h6 class="font-weight-bold">Top Offers</h6>
+                    <div id="blue"><span class="fa fa-minus"></span></div>
+                    <form>
+                        <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label>
+                        </div>
+                        <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off on
+                                iPhone X-Plus</label> </div>
+                    </form>
+                </div>
+            </section>
+            <!-- products section -->
+            <section id="products">
+
+                <div class="row">
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="imgBx">
+                            <img style="max-width: 100%;" src="images/tVBy5Q0.png" alt="images">
+                        </div>
+                        <div class="details">
+                            <h2>SomeOne Famous<br><span>
+                                    <i class="fa fa-heart"></i><a href="cart.html"><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                </span></h2>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        </section>
+    </div>
+
+    </div>
+    <footer class="footer_area section_padding_130_0">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <div class="footer-logo mb-3">
+                            <div class="logo"><img src="images/logo.png" height="50" width="50" alt=""></div>
+                        </div>
+                        <p class="mt-5">How to return a product on PhoneStore?
+                            Corporate and bulk purchases
+                            Report a Product
+                            Ship your package anywhere in Nigeria</p>
+                        <!-- Copywrite Text-->
+
+                        <!-- Footer Social Area-->
+                        <div class="footer_social_area"><a href="#" data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#"
+                                data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i
+                                    class="fa fa-pinterest"></i></a><a href="#" data-toggle="tooltip"
+                                data-placement="top" title="" data-original-title="Skype"><i
+                                    class="fa fa-skype"></i></a><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></div>
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title">About</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Corporate Sale</a></li>
+                                <li><a href="#">Terms &amp; Policy</a></li>
+                                <li><a href="#">Community</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title">Support</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Term &amp; Conditions</a></li>
+                                <li><a href="#">Help &amp; Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title">Contact</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#">Call Centre</a></li>
+                                <li><a href="#">Email Us</a></li>
+                                <li><a href="#">Term &amp; Conditions</a></li>
+                                <li><a href="#">Help Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery.3.5.1.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light align-items-center p-3 px-md-4 mb-3 bg-white shadow-sm">
+        <div class="logo"><img src="images/logo.png" height="50" width="50" alt=""></div>
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Navigation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="all_products.html">All Products</a>
+                <a class="dropdown-item" href="product.html">Product view</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="payment.html">Payment</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Sliders
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="index2.html">Slider2</a>
+                <a class="dropdown-item" href="index3.html">Slider3</a>
+            </div>
+        </div>
+        <div class="my-2 my-md-0 mr-md-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fa fa-search text-dark"></i>
+        </form>
+        <a class="btn btn-sm btn-outline-primary" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+    </nav>
+    <div class="container">
+        <div class="py-5">
+            <div class="row">
+
+
+                <!-- Item details -->
+
+                <div class="col-lg-8">
+                    <input type="radio" class="d-none" name="accordion" id="cb1" />
+                    <section class="box mt-3">
+                        <label class="box-title text-dark" for="cb1"><strong>Basic Information</strong></label>
+                        <label class="box-close" for="acc-close">First</label>
+                        <div class="box-content show">
+                            <div class="container">
+
+                                <form class="row g-3 needs-validation" novalidate>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom01" class="form-label">First name</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="Mark"
+                                            required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom02" class="form-label">Last name</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value="Adeoye"
+                                            required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustomEmail" class="form-label">Email</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" class="form-control" id="validationCustomEmail"
+                                                aria-describedby="inputGroupPrepend" required>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid Phone number.
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2 row">
+                                        <div class="col-md-6">
+                                            <p class="small-text">Alternate Email ID, Phone no (Optional)<br>
+                                                Do you have a Referral Code?</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-primary" type="submit"><b>Proceed</b> <i
+                                                    class="fa fa-chevron-right mx-3" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <input type="radio" class="d-none" name="accordion" id="cb2" />
+                    <section class="box mt-3">
+                        <label class="box-title text-dark" for="cb2"><strong>Secure Payment</strong></label>
+                        <label class="box-close" for="acc-close"></label>
+                        <div class="box-content">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-5">
+                                <div class="tab-vertical">
+                                    <ul class="nav nav-tabs" id="myTab3" role="tablist">
+                                        <li class="nav-item"> <a class="nav-link my-wrapper active"
+                                                id="home-vertical-tab" data-toggle="tab" href="#home-vertical"
+                                                role="tab" aria-controls="home" aria-selected="true"><img
+                                                    src="images/stripe.png" height="25"></a> </li>
+                                        <li class="nav-item"> <a class="nav-link my-wrapper" id="profile-vertical-tab"
+                                                data-toggle="tab" href="#profile-vertical" role="tab"
+                                                aria-controls="profile" aria-selected="false"><img
+                                                    src="images/paypal.png" height="25"></a> </li>
+                                        <li class="nav-item"> <a class="nav-link my-wrapper" id="contact-vertical-tab"
+                                                data-toggle="tab" href="#contact-vertical" role="tab"
+                                                aria-controls="contact" aria-selected="false"><img
+                                                    src="images/splitit.png" height="25"></a> </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent3">
+                                        <div class="tab-pane fade show active" id="home-vertical" role="tabpanel"
+                                            aria-labelledby="home-vertical-tab">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-8">
+                                                            <form>
+                                                                <div class="col-xs-12">
+                                                                    <div class="form-group">
+                                                                        <div class="input-group"> <input type="tel"
+                                                                                class="form-control"
+                                                                                placeholder="Valid Card Number" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-7 col-md-7">
+                                                                        <div class="form-group"> <input type="tel"
+                                                                                class="form-control"
+                                                                                placeholder="MM / YY" /> </div>
+                                                                    </div>
+                                                                    <div class="col-xs-5 col-md-5">
+                                                                        <div class="form-group"> <input type="tel"
+                                                                                class="form-control"
+                                                                                placeholder="CVC" /> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    <div class="form-group"><input type="text"
+                                                                            class="form-control"
+                                                                            placeholder=" Name On Card" /> </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12"> <button
+                                                                            class="btn btn-success btn-lg btn-block">Pay
+                                                                            Now</button> </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="inlineimage">
+                                                                <img class="img-responsive images"
+                                                                    src="images/paycard.png">
+                                                                <img class="img-responsive images"
+                                                                    src="images/mastercard.png">
+                                                                <img class="img-responsive images"
+                                                                    src="images/discover.png">
+                                                                <img class="img-responsive images"
+                                                                    src="images/amexpress.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="profile-vertical" role="tabpanel"
+                                            aria-labelledby="profile-vertical-tab">
+                                            <p>You will be charged USD 649 on your payment card through Paypal payment
+                                                gateway PayPal - Make your online payments simple and secure through
+                                                PayPal's payment gateway option.If you don't have a Paypal account, you
+                                                can make the payment through your Credit Card( Visa, MasterCard, AMEX).
+                                                You can log-in to your PayPal account to complete the payment process on
+                                                your preferred order placed.</p>
+                                            <div class="row">
+                                                <div class="col-xs-12"> <button
+                                                        class="btn btn-success btn-lg btn-block">Pay Now</button> </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="contact-vertical" role="tabpanel"
+                                            aria-labelledby="contact-vertical-tab">
+                                            <p class="text-small">As low as $108.17 /mo with <img
+                                                    src="images/splitit.png" width="50" height="50"></p>
+                                            <div class="row">
+                                                <div class="col-xs-12"> <button
+                                                        class="btn btn-success btn-lg btn-block">Avail Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <input type="radio" class="d-none" name="accordion" id="acc-close" />
+
+                </div>
+
+                <!-- side notification -->
+                <div class="col-lg-4 mt-3">
+                    <div class="card">
+                        <div class="mt-3 container">
+
+                            <div class="text-dark">
+                                <div class="ibox">
+                                    <div class="ibox-title">
+                                        <h5>Cart Summary</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <span>
+                                            Total
+                                        </span>
+                                        <h2 class="font-bold">
+                                            $390,00
+                                        </h2>
+
+                                        <hr>
+                                        <span class="text-muted small">
+                                            *For United States, France and Germany applicable sales tax will be applied
+                                        </span>
+                                        <div class="m-t-sm">
+                                            <div class="btn-group">
+                                                <a href="payment.html" class="btn btn-primary btn-sm"><i
+                                                        class="fa fa-shopping-cart"></i>
+                                                    Checkout</a>
+                                                <a href="#" class="btn btn-white btn-sm"> Cancel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- side notification ends-->
+
+                <footer class="footer_area section_padding_130_0">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Single Widget-->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="single-footer-widget section_padding_0_130">
+                                    <!-- Footer Logo-->
+                                    <div class="logo"><img src="images/logo.png" height="50" width="50" alt=""></div>
+                                    <p class="mt-5">How to return a product on PhoneStore?
+                                        Corporate and bulk purchases
+                                        Report a Product
+                                        Ship your package anywhere in Nigeria
+                                    </p>
+                                    <!-- Copywrite Text-->
+                                    <div class="copywrite-text mb-5">
+                                        <p class="mb-0">Made with <i class="lni-heart mr-1"></i>by<a class="ml-1"
+                                                href="#">Designing World</a>
+                                        </p>
+                                    </div>
+                                    <!-- Footer Social Area-->
+                                    <div class="footer_social_area"><a href="#" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="Facebook"><i
+                                                class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="Pinterest"><i
+                                                class="fa fa-pinterest"></i></a><a href="#" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="Skype"><i
+                                                class="fa fa-skype"></i></a><a href="#" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="Twitter"><i
+                                                class="fa fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                            <!-- Single Widget-->
+                            <div class="col-12 col-sm-6 col-lg">
+                                <div class="single-footer-widget section_padding_0_130">
+                                    <!-- Widget Title-->
+                                    <h5 class="widget-title">About</h5>
+                                    <!-- Footer Menu-->
+                                    <div class="footer_menu">
+                                        <ul>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Corporate Sale</a></li>
+                                            <li><a href="#">Terms &amp; Policy</a></li>
+                                            <li><a href="#">Community</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Widget-->
+                            <div class="col-12 col-sm-6 col-lg">
+                                <div class="single-footer-widget section_padding_0_130">
+                                    <!-- Widget Title-->
+                                    <h5 class="widget-title">Support</h5>
+                                    <!-- Footer Menu-->
+                                    <div class="footer_menu">
+                                        <ul>
+                                            <li><a href="#">Help</a></li>
+                                            <li><a href="#">Support</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Term &amp; Conditions</a></li>
+                                            <li><a href="#">Help &amp; Support</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Widget-->
+                            <div class="col-12 col-sm-6 col-lg">
+                                <div class="single-footer-widget section_padding_0_130">
+                                    <!-- Widget Title-->
+                                    <h5 class="widget-title">Contact</h5>
+                                    <!-- Footer Menu-->
+                                    <div class="footer_menu">
+                                        <ul>
+                                            <li><a href="#">Call Centre</a></li>
+                                            <li><a href="#">Email Us</a></li>
+                                            <li><a href="#">Term &amp; Conditions</a></li>
+                                            <li><a href="#">Help Center</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+</body>
+<script src="js/jquery.3.5.1.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
