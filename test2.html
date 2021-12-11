@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        body {
+            background: #ddd !important;
+        }
+
+        a,
+        a:focus,
+        a:hover {
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+
+        a:hover,
+        .btn {
+            outline: none !important;
+        }
+
+        /*ROUNDED CORNER*/
+        * {
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        /*CATEGORIES BADGE*/
+        .badge {
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            color: white !important;
+            background-color: #289dcc !important;
+        }
+
+        /*FEATURED*/
+        .mg-2,
+        .mg-4 {
+            margin-left: -20px;
+        }
+
+        .linkfeat {
+            background: rgba(76, 76, 76, 0);
+            background: -moz-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(48, 48, 48, 0) 49%, rgba(19, 19, 19, 1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76, 76, 76, 0)), color-stop(49%, rgba(48, 48, 48, 0)), color-stop(100%, rgba(19, 19, 19, 1)));
+            background: -webkit-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(48, 48, 48, 0) 49%, rgba(19, 19, 19, 1) 100%);
+            background: -o-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(48, 48, 48, 0) 49%, rgba(19, 19, 19, 1) 100%);
+            background: -ms-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(48, 48, 48, 0) 49%, rgba(19, 19, 19, 1) 100%);
+            background: linear-gradient(to bottom, rgba(76, 76, 76, 0) 0%, rgba(48, 48, 48, 0) 49%, rgba(19, 19, 19, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light align-items-center p-3 px-md-4 mb-3 bg-white shadow-sm">
+        <div class="logo"><img src="images/logo.png" height="50" width="50" alt=""></div>
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Navigation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="all_products.html">All Products</a>
+                <a class="dropdown-item" href="product.html">Product view</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="payment.html">Payment</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2 text-dark" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                Sliders
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Home</a>
+                <a class="dropdown-item" href="index2.html">Slider2</a>
+                <a class="dropdown-item" href="index3.html">Slider3</a>
+            </div>
+        </div>
+        <div class="my-2 my-md-0 mr-md-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fa fa-search text-dark"></i>
+        </form>
+        <a class="btn btn-sm btn-outline-primary" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6  py-0 pl-3 pr-1 featcard">
+                <div id="featured" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Bootdey</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/MOP4-14-removebg-preview.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Bootdey</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/tVBy5Q0.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Bootdey</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/sunset.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Industri</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Bootdey</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                                <div class="card-img-overlay d-flex linkfeat">
+                                    <a href="#" class="align-self-end">
+                                        <span class="badge">Bootdey</span>
+                                        <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                                        <p class="textfeat" style="display: none;">Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 py-0 px-1 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-6 pb-2 mg-1	">
+                        <div class="card bg-dark text-white">
+                            <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                            <div class="card-img-overlay d-flex">
+                                <a href="#" class="align-self-end">
+                                    <span class="badge">Finansial</span>
+                                    <h6 class="card-title">BI Atur Standarisasi QR Code</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 pb-2 mg-2	">
+                        <div class="card bg-dark text-white">
+                            <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                            <div class="card-img-overlay d-flex">
+                                <a href="#" class="align-self-end">
+                                    <span class="badge">Industri</span>
+                                    <h6 class="card-title">PTSP BP Batam Masuk 10 Terbaik di Indonesia</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 pb-2 mg-3	">
+                        <div class="card bg-dark text-white">
+                            <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                            <div class="card-img-overlay d-flex">
+                                <a href="#" class="align-self-end">
+                                    <span class="badge">Ekspor</span>
+                                    <h6 class="card-title">Review GSP: Amerika Ingin Perdagangan Saling Menguntungkan
+                                    </h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 pb-2 mg-4	">
+                        <div class="card bg-dark text-white">
+                            <img class="card-img img-fluid" src="images/iDwDQ4o.png" alt="">
+                            <div class="card-img-overlay d-flex">
+                                <a href="#" class="align-self-end">
+                                    <span class="badge">Pertumbuhan Ekonomi</span>
+                                    <h6 class="card-title">DPR Setujui Penambahan Anggaran BP Batam Rp565 Miliar</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //FEATURED HOVER
+        $(document).ready(function () {
+            $(".linkfeat").hover(
+                function () {
+                    $(".textfeat").show(500);
+                },
+                function () {
+                    $(".textfeat").hide(500);
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

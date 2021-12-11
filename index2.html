@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="w3-content w3-section" style="max-width:500px">
+                <img class="mySlides animate__fadeIn" src="images/sunset.png" style="width:100%">
+                <img class="mySlides animate__fadeInDown" src="images/tVBy5Q0.png" style="width:100%">
+                <img class="mySlides animate__fadeInLeft" src="images/iDwDQ4o.png" style="width:100%">
+                <img class="mySlides animate__fadeInRight" src="images/image.png" style="width:100%">
+                <img class="mySlides animate__fadeInUp" src="images/MOP4-14-removebg-preview.png" style="width:100%">
+            </div>
+        </div>
+        <!--.Carousel-->
+
+    </div>
+    <script>
+        let myIndex = 0;
+        carousel();
+
+        function carousel() {
+            let i;
+            let x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500);
+        }
+    </script>
+    <script src="js/jquery.3.5.1.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
